@@ -18,15 +18,12 @@ mongoose.connect(uri, {
 app.use(cors());
 app.use(express.json());
 
-
-
 app.get('/', (req, res) => {
     res.send('Server are running')
 })
 
-
-
 app.use('/api/v1', formRouter)
+
 app.listen(port, () => {
     console.log(`server are running on: ${port}`);
 })
